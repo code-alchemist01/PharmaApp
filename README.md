@@ -4,14 +4,22 @@
 
 PharmaApp, kullanıcıların ilaç kutusu fotoğraflarından otomatik olarak ilaç tanıma, takip etme ve hatırlatma alabilmelerini sağlayan kapsamlı bir mobil uygulamadır. Sistem, iki aşamalı derin öğrenme yaklaşımı (YOLOv8 + Vision Transformer) kullanarak yüksek doğruluk oranları elde etmektedir.
 
-## 📊 Veri Setleri
+## 📊 Veri Setleri ve Model Dosyaları
 
-Bu proje aşağıdaki Kaggle veri setlerini kullanmaktadır:
+Bu proje aşağıdaki veri setlerini ve model dosyalarını kullanmaktadır:
+
+### 📦 Veri Setleri (Kaggle)
 
 - **12-Class Turkish Drug Detection Dataset**: [Kaggle Dataset](https://www.kaggle.com/datasets/kutayahin/12-class-turkish-drug-detection-dataset)
 - **150-Class Pharmaceutical Medication Dataset**: [Kaggle Dataset](https://www.kaggle.com/datasets/kutayahin/150-class-pharmaceutical-medication-dataset)
 
-**Not:** Veri setlerini Kaggle'dan indirip proje klasörlerine yerleştirmeniz gerekmektedir. Detaylı kurulum adımları aşağıda verilmiştir.
+**Not:** Model eğitimi yapmak istiyorsanız, veri setlerini Kaggle'dan indirip proje klasörlerine yerleştirmeniz gerekmektedir. Detaylı kurulum adımları aşağıda verilmiştir.
+
+### 🤖 ONNX Model Dosyaları (Google Drive)
+
+- **ONNX Model Dosyaları**: [Google Drive Linki](https://drive.google.com/file/d/1WCvGnk7QElLjhcohL-gOdpSy5k4UA_BP/view?usp=sharing)
+
+**Not:** Uygulamayı çalıştırmak için ONNX model dosyalarını Google Drive'dan indirip `PharmaApp/android/app/src/main/assets/` klasörüne yerleştirmeniz gerekmektedir. Detaylı indirme ve kurulum adımları aşağıdaki "Hızlı Başlangıç" bölümünde verilmiştir.
 
 ---
 
@@ -136,62 +144,96 @@ Bu rehber, projeyi sıfırdan kurmak ve modelleri eğitmek için gerekli tüm ad
 
 **Model eğitimi yapmadan, sadece uygulamayı çalıştırmak istiyorsanız:**
 
-### Adım 1: Git LFS Kurulumu
+### Adım 1: Git Kurulumu ve Repository'yi Clone Et
 
-**Windows:**
-1. https://git-lfs.github.com/ adresine gidin
-2. "Download" butonuna tıklayın
-3. İndirilen `.exe` dosyasını çalıştırın ve kurulum sihirbazını takip edin
-4. Kurulumu doğrulayın:
+**Git Kurulumu:**
+1. [Git](https://git-scm.com/downloads) indirin ve kurun (eğer yoksa)
+2. Kurulumu doğrulayın:
    ```bash
-   git lfs version
-   # Çıktı: git-lfs/3.x.x görmelisiniz
+   git --version
    ```
 
-**Linux:**
+**Repository'yi Clone Et:**
 ```bash
-sudo apt install git-lfs
-git lfs version
+# Repository'yi klonlayın
+git clone https://github.com/code-alchemist01/PharmaAPP.git
+cd PharmaAPP
 ```
 
-**Mac:**
-```bash
-brew install git-lfs
-git lfs version
-```
+### Adım 2: ONNX Model Dosyalarını İndirin (Google Drive)
 
-### Adım 2: Repository'yi Clone Et
+**⚠️ ÖNEMLİ:** Uygulamanın çalışması için ONNX model dosyaları gereklidir!
 
-```bash
-# Repository'yi klonlayın (GitHub URL'ini kullanın)
-git clone https://github.com/kullaniciadi/pharmaapp.git
-cd pharmaapp
-```
+**İndirme Adımları:**
 
-### Adım 3: ONNX Modelleri İndir (Git LFS)
+1. **Google Drive Linkine Gidin:**
+   - Link: [ONNX Model Dosyaları](https://drive.google.com/file/d/1WCvGnk7QElLjhcohL-gOdpSy5k4UA_BP/view?usp=sharing)
+   - Tarayıcınızda linki açın
 
-```bash
-# ONNX model dosyalarını indirin (BU ADIM ÇOK ÖNEMLİ!)
-git lfs pull
+2. **Dosyayı İndirin:**
+   - Google Drive sayfasında "İndir" (Download) butonuna tıklayın
+   - ZIP dosyası indirilecek (~668 MB)
+   - İndirme tamamlanana kadar bekleyin
 
-# İndirme tamamlandıktan sonra kontrol edin:
-dir PharmaApp\android\app\src\main\assets\*.onnx  # Windows
-# veya
-ls PharmaApp/android/app/src/main/assets/*.onnx   # Linux/Mac
+3. **ZIP Dosyasını Açın:**
+   - İndirilen ZIP dosyasını bulun (genellikle İndirilenler klasöründe)
+   - ZIP dosyasını sağ tıklayıp "Tümünü çıkart" veya "Extract All" seçin
+   - İçerik 4 ONNX dosyası olmalı:
+     - `detection.onnx` (~11.71 MB)
+     - `classification.onnx` (~1.22 MB)
+     - `classification.onnx.data` (~327.38 MB)
+     - `classification_150.onnx` (~327.82 MB)
 
-# 4 dosya görmelisiniz:
-# - detection.onnx
-# - classification.onnx
-# - classification.onnx.data
-# - classification_150.onnx
-```
+4. **Dosyaları Assets Klasörüne Kopyalayın:**
 
-**⚠️ Eğer dosyaları görmüyorsanız:**
-- Git LFS kurulu mu kontrol edin: `git lfs version`
-- Tekrar deneyin: `git lfs pull`
-- Hala yoksa: "Sorun Giderme" bölümüne bakın
+   **Windows:**
+   ```bash
+   # Ana klasöre gidin (PharmaAPP klasörü)
+   cd PharmaAPP
+   
+   # Assets klasörünü oluşturun (eğer yoksa)
+   mkdir PharmaApp\android\app\src\main\assets
+   
+   # ONNX dosyalarını kopyalayın
+   # ZIP'ten çıkarttığınız dosyaları bulun ve şu komutu kullanın:
+   copy "ZIP_TEN_ÇIKARTILAN_KLASÖR\*.onnx*" PharmaApp\android\app\src\main\assets\
+   ```
 
-### Adım 4: Node.js Kurulumu
+   **Linux/Mac:**
+   ```bash
+   # Ana klasöre gidin (PharmaAPP klasörü)
+   cd PharmaAPP
+   
+   # Assets klasörünü oluşturun (eğer yoksa)
+   mkdir -p PharmaApp/android/app/src/main/assets
+   
+   # ONNX dosyalarını kopyalayın
+   cp "ZIP_TEN_ÇIKARTILAN_KLASÖR/*.onnx*" PharmaApp/android/app/src/main/assets/
+   ```
+
+5. **Dosyaları Kontrol Edin:**
+   ```bash
+   # Windows
+   dir PharmaApp\android\app\src\main\assets\*.onnx*
+   
+   # Linux/Mac
+   ls PharmaApp/android/app/src/main/assets/*.onnx*
+   
+   # Şu 4 dosyayı görmelisiniz:
+   # - detection.onnx
+   # - classification.onnx
+   # - classification.onnx.data
+   # - classification_150.onnx
+   ```
+
+**✅ Başarılı!** ONNX model dosyaları yerleştirildi.
+
+**❌ Sorun mu yaşıyorsunuz?**
+- Dosyaların doğru klasörde olduğundan emin olun: `PharmaApp/android/app/src/main/assets/`
+- Tüm 4 dosyanın (`.onnx` ve `.onnx.data` dahil) kopyalandığını kontrol edin
+- "Sorun Giderme" bölümüne bakın
+
+### Adım 3: Node.js Kurulumu
 
 1. https://nodejs.org/ adresine gidin
 2. "LTS" versiyonunu indirin (20.x veya üzeri)
@@ -203,7 +245,7 @@ ls PharmaApp/android/app/src/main/assets/*.onnx   # Linux/Mac
    # Node.js 20.x.x ve npm 10.x.x görmelisiniz
    ```
 
-### Adım 5: Node Modüllerini Yükle
+### Adım 4: Node Modüllerini Yükle
 
 ```bash
 # PharmaApp klasörüne gidin
@@ -215,14 +257,14 @@ npm install
 # Yükleme tamamlandığında "added XXX packages" mesajı göreceksiniz
 ```
 
-### Adım 6: Android Studio Kurulumu (Android için)
+### Adım 5: Android Studio Kurulumu (Android için)
 
 1. https://developer.android.com/studio adresine gidin
 2. Android Studio'yu indirin ve kurun
 3. İlk açılışta Android SDK'yı kurun
 4. Java JDK 17+ otomatik kurulacak
 
-### Adım 7: Firebase Yapılandırması (Opsiyonel - Uygulama çalışır ama Firebase özellikleri çalışmaz)
+### Adım 6: Firebase Yapılandırması (Opsiyonel - Uygulama çalışır ama Firebase özellikleri çalışmaz)
 
 1. https://console.firebase.google.com/ adresine gidin
 2. Yeni proje oluşturun
@@ -230,7 +272,7 @@ npm install
 4. `google-services.json` dosyasını indirin
 5. Dosyayı `PharmaApp/android/app/` klasörüne kopyalayın
 
-### Adım 8: Uygulamayı Çalıştır
+### Adım 7: Uygulamayı Çalıştır
 
 **Terminal 1 (Metro Bundler):**
 ```bash
@@ -288,48 +330,65 @@ npm run android
 
 **Git ile Klonlama (Önerilen):**
 
-**ÖNEMLİ:** Bu proje Git LFS kullanıyor (büyük ONNX model dosyaları için). Git LFS kurulu olmalı!
-
-**Git LFS Kurulumu:**
-```bash
-# Windows: https://git-lfs.github.com/ adresinden indirin ve kurun
-# Linux: sudo apt install git-lfs
-# Mac: brew install git-lfs
-
-# Kurulumu doğrulayın
-git lfs version
-```
-
 **Repository'yi Klonlama:**
 ```bash
 # Repository'yi klonlayın
-git clone <repository-url>
-cd PHARMA_APP
-
-# Git LFS dosyalarını indirin (ONNX modeller için gerekli!)
-git lfs pull
-
-# ONNX dosyalarının indirildiğini kontrol edin
-dir PharmaApp\android\app\src\main\assets\*.onnx  # Windows
-# veya
-ls PharmaApp/android/app/src/main/assets/*.onnx   # Linux/Mac
-
-# Şu dosyaları görmelisiniz:
-# - detection.onnx
-# - classification.onnx
-# - classification.onnx.data
-# - classification_150.onnx
+git clone https://github.com/code-alchemist01/PharmaAPP.git
+cd PharmaAPP
 ```
 
-**Manuel İndirme (ZIP):**
-1. Repository'yi ZIP olarak indirin
-2. ZIP dosyasını açın
-3. **ÖNEMLİ:** ZIP indirme Git LFS dosyalarını içermez!
-4. ONNX dosyalarını manuel olarak indirmeniz gerekir (GitHub Releases veya Kaggle'dan)
-5. Klasöre gidin:
+**ONNX Model Dosyalarını İndirin (Google Drive):**
+
+ONNX model dosyaları GitHub'a yüklenemiyor (dosya boyutu limiti nedeniyle). Google Drive'dan indirmeniz gerekiyor:
+
+1. **Google Drive Linkine Gidin:**
+   - [ONNX Model Dosyaları](https://drive.google.com/file/d/1WCvGnk7QElLjhcohL-gOdpSy5k4UA_BP/view?usp=sharing)
+
+2. **Dosyayı İndirin:**
+   - Google Drive sayfasında "İndir" (Download) butonuna tıklayın
+   - ZIP dosyası indirilecek (~668 MB)
+
+3. **ZIP Dosyasını Açın ve Dosyaları Kopyalayın:**
+
+   **Windows:**
    ```bash
-   cd PHARMA_APP
+   # Assets klasörünü oluşturun (eğer yoksa)
+   mkdir PharmaApp\android\app\src\main\assets
+   
+   # ZIP'ten çıkarttığınız ONNX dosyalarını kopyalayın
+   copy "ZIP_TEN_ÇIKARTILAN_KLASÖR\*.onnx*" PharmaApp\android\app\src\main\assets\
    ```
+
+   **Linux/Mac:**
+   ```bash
+   # Assets klasörünü oluşturun (eğer yoksa)
+   mkdir -p PharmaApp/android/app/src/main/assets
+   
+   # ZIP'ten çıkarttığınız ONNX dosyalarını kopyalayın
+   cp "ZIP_TEN_ÇIKARTILAN_KLASÖR/*.onnx*" PharmaApp/android/app/src/main/assets/
+   ```
+
+4. **Kontrol Edin:**
+   ```bash
+   # Windows
+   dir PharmaApp\android\app\src\main\assets\*.onnx*
+   
+   # Linux/Mac
+   ls PharmaApp/android/app/src/main/assets/*.onnx*
+   
+   # Şu 4 dosyayı görmelisiniz:
+   # - detection.onnx
+   # - classification.onnx
+   # - classification.onnx.data
+   # - classification_150.onnx
+   ```
+
+**Manuel İndirme (ZIP):**
+1. Repository'yi ZIP olarak indirin (GitHub'dan "Code" → "Download ZIP")
+2. ZIP dosyasını açın
+3. **ÖNEMLİ:** ZIP indirme ONNX model dosyalarını içermez!
+4. ONNX dosyalarını Google Drive'dan indirin (yukarıdaki adımları takip edin)
+5. ONNX dosyalarını `PharmaApp/android/app/src/main/assets/` klasörüne kopyalayın
 
 #### 0.3 Kaggle API Kurulumu (Veri Setlerini İndirmek İçin)
 
@@ -861,11 +920,11 @@ copy ilacverisi\models\classification\classification.onnx.data PharmaApp\android
 **ONNX Modelleri Kontrol Edin:**
 ```bash
 # ONNX dosyalarının assets klasöründe olduğunu kontrol edin
-dir PharmaApp\android\app\src\main\assets\*.onnx  # Windows
+dir PharmaApp\android\app\src\main\assets\*.onnx*  # Windows
 # veya
-ls PharmaApp/android/app/src/main/assets/*.onnx   # Linux/Mac
+ls PharmaApp/android/app/src/main/assets/*.onnx*   # Linux/Mac
 
-# Şu dosyaları görmelisiniz:
+# Şu 4 dosyayı görmelisiniz:
 # - detection.onnx (11.71 MB)
 # - classification.onnx (1.22 MB)
 # - classification.onnx.data (327.38 MB)
@@ -873,9 +932,8 @@ ls PharmaApp/android/app/src/main/assets/*.onnx   # Linux/Mac
 ```
 
 **Eğer ONNX dosyaları yoksa:**
-1. Git LFS pull yapın: `git lfs pull`
-2. Veya model eğitimi yapın (yukarıdaki adımları takip edin)
-3. Veya GitHub Releases'dan ONNX dosyalarını indirin
+1. **Google Drive'dan indirin** (Önerilen): Yukarıdaki "Hızlı Başlangıç" bölümündeki "Adım 2: ONNX Model Dosyalarını İndirin" adımlarını takip edin
+2. **Veya model eğitimi yapın**: Yukarıdaki "Model Eğitimi" bölümünü takip edin ve eğitilmiş modelleri ONNX'e dönüştürün
 
 #### 3.1 Node.js ve npm Kurulumu
 
