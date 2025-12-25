@@ -67,9 +67,10 @@ Giriş Görüntüsü
 Sonuç: İlaç adı + Güven skoru
 ```
 ![photo_5938234716056128501_y](https://github.com/user-attachments/assets/4dc4b315-711c-4fa4-aaaf-5ede16c6c375) ![photo_5938234716056128502_y](https://github.com/user-attachments/assets/84e91243-4a7e-4e99-af98-0675f954128e)
-
-
-
+![photo_5938234716056128503_y](https://github.com/user-attachments/assets/11534a63-8c7a-43cb-8575-baaac57f03d3) ![photo_5938234716056128504_y](https://github.com/user-attachments/assets/8f8464d3-1027-45d0-b3c3-b310ab978862)
+![photo_5938234716056128505_y](https://github.com/user-attachments/assets/6bcca74c-9011-4fa6-91a6-b84fbe68c5eb) ![photo_5938234716056128506_y](https://github.com/user-attachments/assets/b4bc8c09-1ad7-442d-bf8a-d4226a00ad48)
+![photo_5938234716056128507_y](https://github.com/user-attachments/assets/9e12d34d-b7c6-4159-bd14-6d10293142d4) ![photo_5938234716056128508_y](https://github.com/user-attachments/assets/5ffdbbd0-751b-44da-ae91-3ca3c94f2c79)
+![photo_5938234716056128509_y](https://github.com/user-attachments/assets/c01b7e5d-2c30-433e-94d7-e0d7157fa12f)
 
 
 ### Model Yaklaşımı
