@@ -47,7 +47,7 @@ Bu proje aşağıdaki veri setlerini ve model dosyalarını kullanmaktadır:
 
 PharmaApp, üç ana bileşenden oluşan entegre bir sistemdir:
 
-1. **Python Backend**: Model eğitimi, inference ve web arayüzü (Streamlit)
+1. **Python Backend**: Model eğitimi, inference
 2. **Mobil Uygulama**: React Native tabanlı cross-platform uygulama (Android/iOS)
 3. **Yapay Zeka Modelleri**: YOLOv8 (Detection) + Vision Transformer (Classification)
 
