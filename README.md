@@ -66,12 +66,10 @@ Giriş Görüntüsü
     ↓
 Sonuç: İlaç adı + Güven skoru
 ```
-![photo_5938234716056128501_y (1)](https://github.com/user-attachments/assets/2cf2b09d-9be1-404c-82bb-f3f333e6aed8)
+![photo_5938234716056128501_y](https://github.com/user-attachments/assets/4dc4b315-711c-4fa4-aaaf-5ede16c6c375) ![photo_5938234716056128502_y](https://github.com/user-attachments/assets/84e91243-4a7e-4e99-af98-0675f954128e)
 
-![photo_5938234716056128501_y](https://github.com/user-attachments/assets/69b22cbd-0912-4e08-bc87-5e3eaeebbc17) ![photo_5938234716056128503_y](https://github.com/user-attachments/assets/0bdc8490-8e38-4575-90e7-1c3c0910e26c)
-![photo_5938234716056128505_y](https://github.com/user-attachments/assets/856bb13e-61b8-49d3-863b-99445f9441f9) ![photo_5938234716056128504_y](https://github.com/user-attachments/assets/d568efc0-b23e-4f5a-aabf-0d2c41960a66)
-![photo_5938234716056128506_y](https://github.com/user-attachments/assets/c1aff299-2ceb-4f05-8d30-ae3d1b1f3884) ![photo_5938234716056128509_y](https://github.com/user-attachments/assets/d99d4307-e455-4590-b43f-0682085b1f5e)
-![photo_5938234716056128508_y](https://github.com/user-attachments/assets/7902e35d-7f07-4df6-993a-e44196ea862b) ![photo_5938234716056128502_y](https://github.com/user-attachments/assets/984519b6-4620-4af9-b412-ad16c490cdd9)
+
+
 
 
 ### Model Yaklaşımı
