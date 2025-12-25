@@ -103,3 +103,7 @@ Thumbs.db
 *.tmp
 *.temp
 
+# ZIP files (ONNX models are on Google Drive)
+*.zip
+onnx_models.zip
+
