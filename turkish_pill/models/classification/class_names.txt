@@ -1,0 +1,150 @@
+0: Acretin 30 g cream
+1: Adol 24 caplets
+2: Aggrex 60 tablets
+3: Airoplast nan Tape
+4: All-Vent 125 ml syrup
+5: Alphintern 30 tablets
+6: Ambezim-G 30 tablets
+7: Amrizole 20 tablets
+8: Antopral 14 tablets
+9: Anuva 10 tablets
+10: Apidone nan syrup
+11: Asmakast 30 tablets
+12: Atoreza 28 tablets
+13: Augmentin 14 tablets
+14: Avosoya 30 capsules
+15: B.B.C. 25 ml spray solution
+16: Benogen 10 sachets
+17: Betaderm 30  gm cream
+18: Betadine 120 ml mouth wash
+19: Betadine 120 ml solution
+20: Betadine 60  g ointment
+21: Bivatracin 150 ml spray
+22: Bronchicum Elixir 100 ml nan
+23: Bronchopro 100 ml syrup
+24: Brufen 150 ml syrup
+25: Brufen 30 tablets
+26: C Zinc 30 capsules
+27: C-Retard 10 capsules
+28: C-vit 15 ml oral drops
+29: Candalkan Plus 14 tablets
+30: Carbamide 30 g cream
+31: Catafast 9 sachets
+32: Cataflam 20 tablets
+33: Ceftriaxone 1 Vial
+34: Celebrex 15 capsules
+35: Cemicresto 28 tablets
+36: Cetal 60 ml oral suspension
+37: Cetal Sinus 20 capsules
+38: Cholerose 21 tablets
+39: Choletimb 14 tablets
+40: Ciprodiazole 20 tablets
+41: Ciprofar 10 tablets
+42: Ciprofloxacin Tablets USP 39 10 tablets
+43: Clarinase 14 repetabs
+44: Claritine 20 tablets
+45: Clindasol 20 g gel
+46: Comfort Massage Gel 50 gm gel
+47: Congestal 20 tablets
+48: Conta-flu 20 tablets
+49: Corasore 25 oral drops
+50: Daflon 30 tablets
+51: Daktarin 40 g gel oral
+52: Dalacin C 10 capsules
+53: Davalindi 100 tablets
+54: Dentinox nan colic drops
+55: Diclac 30  gm gel
+56: Diclac 75 ID 20 tablets
+57: Diflucan 1 capsule
+58: Diflucan 7 capsules
+59: Ectomethrin 50 ml emulsion
+60: Enrich 100 ml syrup
+61: Enrich 30 ml oral drops
+62: Ezamol-C 20 tablets
+63: Farcolin 120 ml syrup
+64: Fenistil 15 ml oral drops
+65: Feroglobin nan capsules
+66: Ferrofol 30 spansules
+67: Flagyl 20 tablets
+68: Flector EP 25  gm gel
+69: Flix 16 g nasal spray
+70: Floxabact 10 tablets
+71: Flumox 15 tablets
+72: Flumox 16 capsules
+73: Foradil 30 capsules
+74: Free Nose 30 ml nasal spray
+75: Frost 100 ml spray
+76: Fucicort 15 g cream
+77: Fucidin 15 g cream
+78: Fucidin 20 g cream
+79: Fucidin 30 g cream
+80: GTN 50 ml cream
+81: Gabalepsy 20 capsules
+82: Garamycin 15 g cream
+83: Gengigel nan hydrogel
+84: Glucophage 50 tablets
+85: Haemostop 20 tablets
+86: Hemoclar 40 g cream
+87: Hibiotic 16 tablets
+88: Histazine-1 20 tablets
+89: ImmuGuard 14 sachets
+90: Ivypront 120 ml syrup
+91: Janumet 56 tablets
+92: Jogel 20  gm oral gel
+93: Jusprin 60 tablets
+94: La-vie nan gel
+95: Lactulose 120 ml syrup
+96: Lamifen 15  gm cream
+97: Lamisil 15 g cream
+98: Lovir 10 tablets
+99: Mebo 30 mg ointment
+100: Megamox 14 tablets
+101: Micropore nan Tape
+102: Midodrine 20 tablets
+103: Miflonide 60 capsules
+104: Milga 40 tablets
+105: Minalax 10 tablets
+106: Motilium 40 tablets
+107: Mucophylline 125 ml syrup
+108: Mucosta 20 tablets
+109: Multi-Relax 10 mg tablets
+110: Mupirax 10 g ointment
+111: Neurovit 30 tablets
+112: Night and Day 10 tablets
+113: Oracure 30  gm oral gel
+114: Orex 60 ml solution
+115: Orovex Delicate 250 ml mouth wash
+116: Osteocare 120 ml liquid
+117: Pandermal 15 g cream
+118: Panthenol 20 g cream
+119: Paramol 20 tablets
+120: Pedical nan syrup
+121: Pentamix 120 ml syrup
+122: Phenadone 100 ml syrup
+123: Picolax 15 ml oral drops
+124: Predsol 50 ml syrup
+125: Pridocaine 15 g cream
+126: Primrose Plus 30 capsules
+127: Prinorelax 10 capsules
+128: Remowax 15 ml ear drops
+129: Rennie 96 chewable tablets
+130: Reparil-Gel N 40 g gel
+131: Rheumatizen 60 g cream
+132: Rhinopro 20 capsules
+133: Salivex-L 10 ml paint
+134: Sediproct 20 g cream
+135: SelokenZOC 28 tablets
+136: Solvadol 20 ml spray
+137: Steronate 20 tablets
+138: Streptoquin 10 tablets
+139: Tareg 40 mg tablets
+140: Tears Guard 15 ml eye drops
+141: Tentavair 160 mcg oral inhalation
+142: Vidrop 15 ml oral drops
+143: Visceralgine 120 ml syrup
+144: Vitacid C 12 tablets
+145: Vitamax 15 capsules
+146: Zantac 20 tablets
+147: Zenta 100  gm cream
+148: Zyrtec 10 ml oral drops
+149: Zyrtec 20 tablets

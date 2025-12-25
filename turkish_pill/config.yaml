@@ -1,0 +1,29 @@
+# Turkish Pill Classification - Konfigürasyon Dosyası
+
+# Veri Seti Ayarları
+data:
+  dataset_path: "data"
+  data_yaml: "data/data.yaml"
+
+# Classification Model (ViT) Ayarları
+classification:
+  model_name: "google/vit-base-patch16-224"  # ViT-Base model
+  image_size: 224
+  batch_size: 12  # RTX 5060 8GB için optimize (memory test edildi)
+  epochs: 20  # Daha hızlı eğitim için azaltıldı (fine-tuning yeterli)
+  learning_rate: 0.00002  # Fine-tuning için düşük learning rate
+  device: "cuda"  # RTX 5060 GPU aktif
+  save_dir: "models/classification"
+  use_class_weights: true  # Imbalanced data için class weighting
+  use_augmentation: true  # Data augmentation kullan
+
+# Streamlit Ayarları
+streamlit:
+  page_title: "Turkish Pill Classification"
+  page_icon: "💊"
+  layout: "wide"
+
+# Model Yolları
+models:
+  classification: "models/classification"
+

@@ -1,0 +1,72 @@
+# Dataset folders (stored on Kaggle, not in GitHub)
+# Veri setleri Kaggle'da saklanıyor, GitHub'a yüklenmiyor
+
+# 12-Class Dataset
+ilacverisi/SAP_BABA_CLEAN/train/
+ilacverisi/SAP_BABA_CLEAN/valid/
+ilacverisi/SAP_BABA_CLEAN/test/
+ilacverisi/SAP_BABA_CLEAN/train/images/
+ilacverisi/SAP_BABA_CLEAN/train/labels/
+ilacverisi/SAP_BABA_CLEAN/valid/images/
+ilacverisi/SAP_BABA_CLEAN/valid/labels/
+ilacverisi/SAP_BABA_CLEAN/test/images/
+ilacverisi/SAP_BABA_CLEAN/test/labels/
+ilacverisi/SAP_BABA_CLEAN/*.cache
+
+# 150-Class Dataset
+turkish_pill/Mobile-Captured Pharmaceutical Medication Packages/
+turkish_pill/data/train/
+turkish_pill/data/valid/
+turkish_pill/data/test/
+
+# Model files (too large for GitHub)
+# Models are downloaded separately or built from training
+ilacverisi/models/detection/*.pt
+ilacverisi/models/classification/*.pt
+ilacverisi/models/classification/*.onnx
+turkish_pill/models/classification/*.pt
+turkish_pill/models/classification/*.onnx
+turkish_pill/models/classification/*.onnx.data
+
+# ONNX models in mobile app (NOT ignored - required for app to work)
+# PharmaApp/android/app/src/main/assets/*.onnx files are needed for the app
+# But we don't commit large model files if they exist in models/ subfolder
+PharmaApp/android/app/src/main/assets/models/*.onnx
+PharmaApp/android/app/src/main/assets/models/*.onnx.data
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+

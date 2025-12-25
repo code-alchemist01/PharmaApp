@@ -1,0 +1,17 @@
+names:
+- aferin
+- apranax
+- arveles
+- aspirin
+- dolorex
+- hametanKrem
+- hametanMerhem
+- majezik
+- metpamid
+- parol
+- terbisil
+- unisom
+nc: 12
+test: test/images
+train: train/images
+val: valid/images

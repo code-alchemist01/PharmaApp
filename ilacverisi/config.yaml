@@ -1,0 +1,55 @@
+# İlaç Takip Sistemi - Konfigürasyon Dosyası
+
+# Veri Seti Ayarları
+data:
+  dataset_path: "SAP_BABA_CLEAN"
+  data_yaml: "SAP_BABA_CLEAN/data.yaml"
+  cropped_path: "data/cropped"
+  
+# Detection Model (YOLOv8) Ayarları
+detection:
+  model_size: "n"  # n=nano, s=small, m=medium, l=large, x=xlarge
+  image_size: 640
+  batch_size: 16
+  epochs: 100
+  learning_rate: 0.01
+  device: "cuda"  # "cuda" veya "cpu"
+  save_dir: "models/detection"
+  project: "runs/detection"
+  name: "train"
+  
+# Classification Model (ViT) Ayarları
+classification:
+  model_name: "google/vit-base-patch16-224"
+  image_size: 224
+  batch_size: 32
+  epochs: 20
+  learning_rate: 0.00002
+  device: "cuda"  # "cuda" veya "cpu"
+  save_dir: "models/classification"
+  use_class_weights: true  # Imbalanced data için class weighting
+  
+# OCR Ayarları
+ocr:
+  use_ocr: true
+  engine: "tesseract"  # "paddleocr" veya "tesseract"
+  languages: ["tr", "eng"]  # Tesseract için: "tr", "eng" (Türkçe ve İngilizce)
+  
+# Verification Ayarları
+verification:
+  enabled: false  # Şimdilik kapalı
+  image_similarity_weight: 0.7
+  ocr_text_weight: 0.3
+  threshold: 0.85
+  
+# Streamlit Ayarları
+streamlit:
+  page_title: "İlaç Tanıma Sistemi"
+  page_icon: "💊"
+  layout: "wide"
+  
+# Model Yolları (Eğitim sonrası doldurulacak)
+models:
+  detection: "models/detection/best.pt"
+  classification: "models/classification"
+

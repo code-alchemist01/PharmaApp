@@ -1,0 +1,32 @@
+# İlaç Takip Sistemi - Python Bağımlılıkları
+
+# Deep Learning Frameworks
+torch>=2.0.0
+torchvision>=0.15.0
+ultralytics>=8.0.0
+
+# Transformers (ViT için)
+transformers>=4.30.0
+accelerate>=0.20.0
+
+# Görüntü İşleme
+Pillow>=9.5.0
+opencv-python>=4.7.0
+numpy>=1.24.0
+
+# OCR
+paddlepaddle>=2.5.0
+paddleocr>=2.7.0
+
+# Streamlit
+streamlit>=1.25.0
+
+# Yardımcı Kütüphaneler
+pyyaml>=6.0
+tqdm>=4.65.0
+scikit-learn>=1.3.0
+pandas>=2.0.0
+
+# Optional: Tesseract (alternatif OCR)
+pytesseract>=0.3.10
+
