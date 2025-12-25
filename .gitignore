@@ -28,9 +28,11 @@ turkish_pill/models/classification/*.pt
 turkish_pill/models/classification/*.onnx
 turkish_pill/models/classification/*.onnx.data
 
-# ONNX models in mobile app (NOT ignored - required for app to work)
-# PharmaApp/android/app/src/main/assets/*.onnx files are needed for the app
-# But we don't commit large model files if they exist in models/ subfolder
+# ONNX models in mobile app (too large for GitHub - 100MB limit)
+# These files should be downloaded separately or built from training
+# See README.md for instructions on how to get these files
+PharmaApp/android/app/src/main/assets/*.onnx
+PharmaApp/android/app/src/main/assets/*.onnx.data
 PharmaApp/android/app/src/main/assets/models/*.onnx
 PharmaApp/android/app/src/main/assets/models/*.onnx.data
 
