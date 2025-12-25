@@ -10,7 +10,7 @@ Bu proje aşağıdaki veri setlerini ve model dosyalarını kullanmaktadır:
 
 ### 📦 Veri Setleri (Kaggle)
 
-- **12-Class Turkish Drug Detection Dataset**: [Kaggle Dataset]([https://www.kaggle.com/datasets/kutayahin/12-class-turkish-drug-detection-dataset](https://www.kaggle.com/datasets/kutayahin/turkish-pharmaceutical-drug-dataset-12-classes))
+- **12-Class Turkish Drug Detection Dataset**: [Kaggle Dataset](https://www.kaggle.com/datasets/kutayahin/turkish-pharmaceutical-drug-dataset-12-classes)
 - **150-Class Pharmaceutical Medication Dataset**: [Kaggle Dataset](https://www.kaggle.com/datasets/kutayahin/150-class-pharmaceutical-medication-dataset)
 
 **Not:** Model eğitimi yapmak istiyorsanız, veri setlerini Kaggle'dan indirip proje klasörlerine yerleştirmeniz gerekmektedir. Detaylı kurulum adımları aşağıda verilmiştir.
@@ -452,7 +452,7 @@ unzip 150-class-pharmaceutical-medication-dataset.zip -d "Mobile-Captured Pharma
 
 **12-Class Dataset (SAP_BABA_CLEAN):**
 
-1. [Kaggle Dataset]([https://www.kaggle.com/datasets/kutayahin/12-class-turkish-drug-detection-dataset](https://www.kaggle.com/datasets/kutayahin/turkish-pharmaceutical-drug-dataset-12-classes)) sayfasına gidin
+1. [Kaggle Dataset](https://www.kaggle.com/datasets/kutayahin/turkish-pharmaceutical-drug-dataset-12-classes) sayfasına gidin
 2. "Download" butonuna tıklayın
 3. ZIP dosyasını indirin
 4. ZIP dosyasını açın ve içeriğini `ilacverisi/SAP_BABA_CLEAN/` klasörüne kopyalayın
