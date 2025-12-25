@@ -32,13 +32,9 @@ Model eğitimi yaparak kendi ONNX dosyalarınızı oluşturun:
 
 **Detaylı talimatlar:** README.md → "Model Eğitimi" bölümü
 
-### Yöntem 2: GitHub Releases'dan İndirme
+### Yöntem 2: Google Drive'dan indirme
 
-1. GitHub repository sayfasına gidin
-2. "Releases" sekmesine tıklayın
-3. En son release'i bulun
-4. ONNX model dosyalarını indirin
-5. Dosyaları `PharmaApp/android/app/src/main/assets/` klasörüne kopyalayın
+1. https://drive.google.com/file/d/1WCvGnk7QElLjhcohL-gOdpSy5k4UA_BP/view?usp=sharing linkindeki zipi indirebilirsiniz
 
 ### Yöntem 3: Manuel Olarak Oluşturma
 
