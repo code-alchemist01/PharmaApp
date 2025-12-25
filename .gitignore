@@ -28,12 +28,19 @@ turkish_pill/models/classification/*.pt
 turkish_pill/models/classification/*.onnx
 turkish_pill/models/classification/*.onnx.data
 
-# ONNX models in mobile app
-# NOTE: These files are tracked with Git LFS (see .gitattributes)
-# Large files (>100MB) will be stored in Git LFS
-# PharmaApp/android/app/src/main/assets/*.onnx
-# PharmaApp/android/app/src/main/assets/*.onnx.data
-# (Commented out - using Git LFS instead)
+# ONNX models (too large for GitHub - stored in external storage)
+# These files should be downloaded separately or built from training
+# See README.md and onnx_models/README.md for instructions
+
+# ONNX models folder (contains models for external storage)
+onnx_models/*.onnx
+onnx_models/*.onnx.data
+
+# ONNX models in mobile app assets
+PharmaApp/android/app/src/main/assets/*.onnx
+PharmaApp/android/app/src/main/assets/*.onnx.data
+PharmaApp/android/app/src/main/assets/models/*.onnx
+PharmaApp/android/app/src/main/assets/models/*.onnx.data
 
 # Python
 __pycache__/
