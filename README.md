@@ -10,7 +10,7 @@ Bu proje aşağıdaki veri setlerini ve model dosyalarını kullanmaktadır:
 
 ### 📦 Veri Setleri (Kaggle)
 
-- **12-Class Turkish Drug Detection Dataset**: [Kaggle Dataset](https://www.kaggle.com/datasets/kutayahin/12-class-turkish-drug-detection-dataset)
+- **12-Class Turkish Drug Detection Dataset**: [Kaggle Dataset](https://www.kaggle.com/datasets/kutayahin/turkish-pharmaceutical-drug-dataset-12-classes)
 - **150-Class Pharmaceutical Medication Dataset**: [Kaggle Dataset](https://www.kaggle.com/datasets/kutayahin/150-class-pharmaceutical-medication-dataset)
 
 **Not:** Model eğitimi yapmak istiyorsanız, veri setlerini Kaggle'dan indirip proje klasörlerine yerleştirmeniz gerekmektedir. Detaylı kurulum adımları aşağıda verilmiştir.
@@ -452,7 +452,7 @@ unzip 150-class-pharmaceutical-medication-dataset.zip -d "Mobile-Captured Pharma
 
 **12-Class Dataset (SAP_BABA_CLEAN):**
 
-1. [Kaggle Dataset](https://www.kaggle.com/datasets/kutayahin/12-class-turkish-drug-detection-dataset) sayfasına gidin
+1. [Kaggle Dataset](https://www.kaggle.com/datasets/kutayahin/turkish-pharmaceutical-drug-dataset-12-classes) sayfasına gidin
 2. "Download" butonuna tıklayın
 3. ZIP dosyasını indirin
 4. ZIP dosyasını açın ve içeriğini `ilacverisi/SAP_BABA_CLEAN/` klasörüne kopyalayın
@@ -900,13 +900,13 @@ ls PharmaApp/android/app/src/main/assets/*.onnx   # Linux/Mac
 # Şu dosyaları görmelisiniz:
 # - detection.onnx (11.71 MB)
 # - classification.onnx (1.22 MB)
-# - classification.onnx.data (327.38 MB) - Git LFS ile
-# - classification_150.onnx (327.82 MB) - Git LFS ile
+# - classification.onnx.data (327.38 MB)
+# - classification_150.onnx (327.82 MB)
 ```
 
 **Not:** 
-- Eğer repository'yi klonladıysanız, ONNX dosyaları Git LFS ile gelecek. `git lfs pull` komutunu çalıştırmanız gerekebilir.
-- Eğer model eğitimi yaptıysanız, `classification.onnx.data` dosyasını da kopyalayın:
+- **ÖNEMLİ:** ONNX dosyaları GitHub'a yüklenemiyor (dosya boyutu limiti nedeniyle). ONNX dosyalarını Google Drive'dan indirmeniz gerekiyor: [ONNX Model Dosyaları](https://drive.google.com/file/d/1WCvGnk7QElLjhcohL-gOdpSy5k4UA_BP/view?usp=sharing)
+- Eğer model eğitimi yaptıysanız ve kendi ONNX dosyalarınızı oluşturduysanız, tüm dosyaları (`.onnx` ve `.onnx.data` dahil) kopyalayın:
 ```bash
 copy ilacverisi\models\classification\classification.onnx.data PharmaApp\android\app\src\main\assets\
 ```
@@ -914,7 +914,8 @@ copy ilacverisi\models\classification\classification.onnx.data PharmaApp\android
 ### 3. Mobil Uygulama Kurulumu
 
 **ÖNEMLİ:** 
-- Eğer repository'yi klonladıysanız ve ONNX modelleri Git LFS ile indirdiyseniz, model eğitimi yapmadan direkt bu adıma geçebilirsiniz.
+- Eğer repository'yi klonladıysanız, ONNX modelleri GitHub'da bulunmuyor. ONNX dosyalarını Google Drive'dan indirmeniz gerekiyor: [ONNX Model Dosyaları](https://drive.google.com/file/d/1WCvGnk7QElLjhcohL-gOdpSy5k4UA_BP/view?usp=sharing)
+- Model eğitimi yapmadan direkt uygulamayı çalıştırmak istiyorsanız, yukarıdaki "Hızlı Başlangıç" bölümündeki "Adım 2: ONNX Model Dosyalarını İndirin" adımlarını takip edin.
 - Eğer model eğitimi yaptıysanız, ONNX dönüştürme işlemlerini tamamladıktan sonra bu adıma geçin.
 
 **ONNX Modelleri Kontrol Edin:**
