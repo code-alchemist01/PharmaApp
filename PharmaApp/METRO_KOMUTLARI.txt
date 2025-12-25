@@ -1,0 +1,72 @@
+===========================================
+METRO BUNDLER ÇALIŞTIRMA KOMUTLARI
+===========================================
+
+1. Yeni bir PowerShell penceresi açın
+
+2. Proje dizinine gidin:
+   cd C:\PHARMA_APP\PharmaApp
+
+3. Metro bundler'ı başlatın:
+   npm start
+
+   VEYA
+
+   npx react-native start
+
+   VEYA
+
+   yarn start
+
+===========================================
+EĞER CACHE SORUNU VARSA:
+===========================================
+
+Metro'yu cache'siz başlatmak için:
+   npm start -- --reset-cache
+
+   VEYA
+
+   npx react-native start --reset-cache
+
+===========================================
+EĞER PORT KULLANIMDA HATASI VARSA:
+===========================================
+
+Farklı bir port ile başlatmak için:
+   npm start -- --port 8082
+
+   VEYA
+
+   npx react-native start --port 8082
+
+===========================================
+KULLANIM:
+===========================================
+
+1. Metro bundler'ı başlatın (yukarıdaki komutlardan biri)
+2. Metro çalışırken, başka bir terminal'de:
+   cd C:\PHARMA_APP\PharmaApp
+   npm run android
+
+   VEYA
+
+   npx react-native run-android
+
+3. Emulator'de uygulama otomatik olarak açılacak
+
+===========================================
+HIZLI KOMUTLAR (Kopyala-Yapıştır):
+===========================================
+
+# Metro başlat (cache'siz):
+cd C:\PHARMA_APP\PharmaApp && npm start -- --reset-cache
+
+# Metro başlat (normal):
+cd C:\PHARMA_APP\PharmaApp && npm start
+
+# Android uygulamasını çalıştır (ayrı terminal):
+cd C:\PHARMA_APP\PharmaApp && npm run android
+
+===========================================
+

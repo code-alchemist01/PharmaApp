@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "718200825560",
+    "project_id": "ilactakip-9ee8d",
+    "storage_bucket": "ilactakip-9ee8d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718200825560:android:60849278d0f671d8b099ad",
+        "android_client_info": {
+          "package_name": "com.pharmaapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkRID7U4D6-bzbSAN12XW7hZvgrDXAzq0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
